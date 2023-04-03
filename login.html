@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css">
+    <script src="/login.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">Log in </h1>
+    <div class="box">
+        <h2>Name</h2>
+        <input type="text">
+        <h2>Password</h2>
+        <input type="password" id="password">
+
+    </div>
+    <div class="btn">
+        <button>login</button>
+        <button onclick="toggel(this)" id="button">showpassword</button>
+    </div>
+    <script>
+        let password = document.getElementById("password");
+        function toggel(elem) {
+            type = password.getAttribute("type");
+
+            if (isNaN(password.value)) {
+                alert("enter a number");
+                
+            }
+            if (type === "password") {
+                password.setAttribute("type", "text");
+                elem.innerText = "hide password";
+
+            }
+            else {
+                password.setAttribute("type", "password");
+                elem.innerText = "show password";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
