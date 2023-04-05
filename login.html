@@ -16,13 +16,14 @@
         <h1 class="heading">Log in </h1>
         <div class="box">
             <h2>Name</h2>
-            <input type="text">
+            <input onkeyup="space(this.value)" type="text">
             <h2>Password</h2>
             <input type="password" id="password">
             <h2>confirm password</h2>
             <input onkeyup="validate(this)" type="password" id="pass">
             <p id="res"></p>
             <p id="done"></p>
+            <p id="space"></p>
         </div>
         <div class="btn">
             <button>login</button>

@@ -52,7 +52,7 @@ function myFunction() {
 
 let input_txt = document.getElementById("input_txt");
 let done = document.getElementById("done");
-  window.addEventListener("keyup", event => {
+window.addEventListener("keyup", event => {
     let casps = event.getModifierState("CapsLock");
     if (casps) {
         document.getElementById("done").innerText = "Capslock is on!"
@@ -61,7 +61,21 @@ let done = document.getElementById("done");
         document.getElementById("done").innerHTML = "";
     }
 })
+let pattern = /\s/g;
+function space(data) {
+    let alert = document.getElementById("space");
+    let check = pattern.test(data);
+    if (check) {
+        console.log("a")
+        alert.innerText = "you cant use space in it";
+     
 
+    } else {
+        console.log("b")
+        alert.innerText = "";
+    }
+
+}
 
 
 
