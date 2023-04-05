@@ -18,12 +18,20 @@
             <h2>Name</h2>
             <input onkeyup="space(this.value)" type="text">
             <h2>Password</h2>
-            <input onkeyup="space(this.value)" type="password" id="password">
+            <input onkeyup=" space(this.value),passchk(this.value)" type="password" id="password">
             <h2>confirm password</h2>
-            <input onkeyup="space(this.value)" onkeyup="validate(this)" type="password" id="pass">
+            <input onkeyup=" space(this.value),passchk(this.value),validate(this)" type="password" id="pass">
             <p id="res"></p>
             <p id="done"></p>
             <p id="space"></p>
+            <p class="g">
+                <label class="password-reg">8 characters</label>
+                <label class="password-reg">1 lower case character</label>
+                <label class="password-reg">1 upper case character</label>
+                <label class="password-reg">1 numerical character </label>
+                <label class="password-reg">1 special character</label>
+
+            </p>
         </div>
         <div class="btn">
             <button>login</button>

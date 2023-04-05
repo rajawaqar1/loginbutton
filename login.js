@@ -68,7 +68,7 @@ function space(data) {
     if (check) {
         console.log("a")
         alert.innerText = "you cant use space in it";
-     
+
 
     } else {
         console.log("b")
@@ -78,5 +78,45 @@ function space(data) {
 }
 
 
+function passchk(data) {
+    let eightcharacters = new RegExp("(?=.{8,})");
+    let specialcharacter = new RegExp("(?=.*[!@#\$%\^&\*])");
+    let numericalcharacter = new RegExp("(?=.*[0-9])");
+    let uppercase = new RegExp("(?=.*[A-Z])");
+    let lowercase = new RegExp("(?=.*[a-z])");
+    let passClss = document.getElementsByClassName("password-reg");
+    if (eightcharacters.test(data)) {
+        passClss[0].style.color = "green";
+
+    } else {
+        passClss[0].style.color = "black";
+    }
+    if (lowercase.test(data)) {
+        passClss[1].style.color = "green";
+
+    } else {
+        passClss[1].style.color = "";
+    }
+    if (uppercase.test(data)) {
+        passClss[2].style.color = "green";
+
+    } else {
+        passClss[2].style.color = "black";
+    }
+    if (numericalcharacter.test(data)) {
+        passClss[3].style.color = "green";
+
+    } else {
+        passClss[3].style.color = "black";
+    }
+    if ( specialcharacter.test(data)) {
+        passClss[4].style.color = "green";
+
+    } else {
+        passClss[4].style.color = "black";
+    }
+
+
+}
 
 

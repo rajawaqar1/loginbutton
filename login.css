@@ -29,3 +29,7 @@
     
 
 }
+.g{
+    display: flex;
+    flex-direction: column;
+}
